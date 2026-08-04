@@ -14,7 +14,15 @@ Requires Apple silicon and macOS 15 (Sequoia) or later.
 brew install --cask blixel-app/blixel/blixel
 ```
 
-That installs `Blixel.app` and puts the `blixel` command on your PATH.
+That adds the tap and installs in one step. If you would rather tap first, these
+are equivalent:
+
+```bash
+brew tap blixel-app/blixel
+brew install --cask blixel
+```
+
+Either way you get `Blixel.app` and the `blixel` command on your PATH.
 
 To update:
 
