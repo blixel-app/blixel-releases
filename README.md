@@ -1,7 +1,10 @@
 # Blixel — releases
 
-Multi-window screen sharing for pairing and ensemble sessions. Native macOS,
-built on LiveKit.
+[Blixel](https://blixel.app) is video chat for Mac. Everyone in a call can share
+multiple windows at once, and anyone can hand a spoken or typed request to the
+coding agents in the room. Native macOS, built on LiveKit.
+
+Docs: [blixel.app/docs](https://blixel.app/docs)
 
 This repository hosts release artifacts only. Downloads live under
 [Releases](../../releases).
@@ -11,14 +14,14 @@ Requires Apple silicon and macOS 15 (Sequoia) or later.
 ## Install
 
 ```bash
-brew install --cask blixel-app/blixel/blixel
+brew install --cask blixel-app/tap/blixel
 ```
 
 That adds the tap and installs in one step. If you would rather tap first, these
 are equivalent:
 
 ```bash
-brew tap blixel-app/blixel
+brew tap blixel-app/tap
 brew install --cask blixel
 ```
 
@@ -30,7 +33,7 @@ To update:
 brew upgrade --cask blixel
 ```
 
-Or download `Blixel-<version>.zip` from the [Releases](../../releases) page and
+Or download `Blixel-<version>.dmg` from the [Releases](../../releases) page and
 drag `Blixel.app` to `/Applications`.
 
 ## Verifying a download
@@ -58,10 +61,10 @@ codesign -dv /Applications/Blixel.app 2>&1 | grep TeamIdentifier
 TeamIdentifier=N79N985D2P
 ```
 
-Each release also carries a `.sha256` file alongside the zip:
+Each release also carries a `.sha256` file alongside the disk image:
 
 ```bash
-shasum -a 256 -c Blixel-<version>.zip.sha256
+shasum -a 256 -c Blixel-<version>.dmg.sha256
 ```
 
 Homebrew performs this check for you on every install and upgrade.
